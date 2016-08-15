@@ -13,7 +13,9 @@
 		<div class="row">
 		  <div class="col-md-4" id="P1Info">
 			  <p class="col-md-3"> PLAYER 1 </p>
+
 			  <input type="text" id="P1Name">
+
 			  <select class="col-md-3" id="P1RoboSelector">
 			    <optgroup label="Bipedals">
 			      <option value="Walker"> Walker </option>
@@ -28,6 +30,7 @@
 			      <option value="BomberDrone"> Bomber Drone </option>
 			    </optgroup>
 			  </select>
+
 			  <select id="P1WeaponSelector">
 			    <optgroup label="Robot Weapons">
 			    	<option value="Flamethrower">Flamethrower</option>
@@ -38,10 +41,25 @@
 			    	<option value="MachineGun">Machine Gun</option>
 			    </optgroup>
 			  </select>
+
+			   <select id="P1ModSelector">
+			    <optgroup label="Robot Modifications">
+				    	<option value="LightShields">LightShields</option>
+				    	<option value="HeavyShields">HeavyShields</option>
+				    	<option value="EnhancedRockets">EnhancedRockets</option>
+				    	<option value="HeavyRockets">HeavyRockets</option>
+				    	<option value="EngineUpgrade">EngineUpgrade</option>
+		          <option value="MegaTurbineJetFuel">MegaTurbineJetFuel</option>
+			      </optgroup>
+			  </select>
+
       </div>
+
       <div class="col-md-4" id="P2Info">
 			  <p class="col-md-3"> PLAYER 2 </p>
+
 			  <input type="text" id="P2Name">
+
 			  <select class="col-md-3" id="P2RoboSelector">
 			    <optgroup label="Bipedals">
 			      <option value="Walker"> Walker </option>
@@ -56,6 +74,7 @@
 			      <option value="BomberDrone"> Bomber Drone </option>
 			    </optgroup>
 			  </select>
+
 			  <select id="P2WeaponSelector">
 			    <optgroup label="Robot Weapons">
 				    	<option value="Flamethrower">Flamethrower</option>
@@ -66,6 +85,18 @@
 				    	<option value="MachineGun">Machine Gun</option>
 			      </optgroup>
 			  </select>
+
+			  <select id="P2ModSelector">
+			    <optgroup label="Robot Modifications">
+				    	<option value="LightShields">LightShields</option>
+				    	<option value="HeavyShields">HeavyShields</option>
+				    	<option value="EnhancedRockets">EnhancedRockets</option>
+				    	<option value="HeavyRockets">HeavyRockets</option>
+				    	<option value="EngineUpgrade">EngineUpgrade</option>
+		          <option value="MegaTurbineJetFuel">MegaTurbineJetFuel</option>
+			      </optgroup>
+			  </select>
+
 		  </div>
 	  </div>
     <button id="battle">Lets Battle!!</button>
@@ -83,6 +114,7 @@
 <script src="Robos/robots.js"></script>
 <script src="Robos/roboGarage.js"></script>
 <script src="Robos/roboArsenal.js"></script>
+<script src="Robos/roboGear.js"></script>
 <script src="events.js"></script>
 </body>
 </html>

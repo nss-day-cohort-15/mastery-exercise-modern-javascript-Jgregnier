@@ -3,10 +3,12 @@ $(document).ready(function() {
   var P1RoboName = null;
   var P1RoboType = null;
   var P1Weapon = null;
+  var P1Modification = null;
 
   var P2RoboName = null;
   var P2RoboType = null;
   var P2Weapon = null;
+  var P2Modification = null;
 
   var P1;
   var P2;
@@ -14,9 +16,13 @@ $(document).ready(function() {
   $("#battle").on("click", getP1Name);
   $("#battle").on("click", getP1RoboType);
   $("#battle").on("click", getP1Weapon);
+  $("#battle").on("click", getP1Modification);
+
   $("#battle").on("click", getP2Name);
   $("#battle").on("click", getP2RoboType);
   $("#battle").on("click", getP2Weapon);
+  $("#battle").on("click", getP2Modification);
+
   $("#battle").on("click", createP1);
   $("#battle").on("click", createP2);
   $("#battle").on("click", newView);
@@ -36,18 +42,34 @@ $(document).ready(function() {
     return P1Weapon
   }
 
+  function getP1Modification () {
+    P1Modification = $("#P1ModSelector option:selected").val()
+    return P1Modification
+  }
+
   function createP1 () {
     P1 = new RobotBattleDome.robotWarriors.Player(getP1Name());
+
     var chosenRoboType = new RobotBattleDome.Garage[P1RoboType]();
     var chosenWeapon = new RobotBattleDome.roboArsenal[P1Weapon]();
+    var chosenModification = new RobotBattleDome.roboMods[P1Modification]();
+
     P1.roboType = chosenRoboType;
     P1.weapon = chosenWeapon;
+    P1.modification = chosenModification
+
     P1.health += P1.roboType.healthBonus;
     P1.damage += P1.roboType.damageBonus;
     P1.speed += P1.roboType.speedBonus;
+
     P1.health += P1.weapon.healthBonus;
     P1.damage += P1.weapon.damageBonus;
     P1.speed += P1.weapon.speedBonus;
+
+    P1.health += P1.modification.healthBonus;
+    P1.damage += P1.modification.damageBonus;
+    P1.speed += P1.modification.speedBonus;
+
     console.log(P1)
     return P1
   }
@@ -67,18 +89,34 @@ $(document).ready(function() {
     return P2Weapon
   }
 
+  function getP2Modification () {
+    P2Modification = $("#P2ModSelector option:selected").val()
+    return P2Modification
+  }
+
   function createP2 () {
     P2 = new RobotBattleDome.robotWarriors.Player(getP2Name());
+
     var chosenRoboType = new RobotBattleDome.Garage[P2RoboType]();
     var chosenWeapon = new RobotBattleDome.roboArsenal[P2Weapon]();
+    var chosenModification = new RobotBattleDome.roboMods[P2Modification]();
+
     P2.roboType = chosenRoboType;
     P2.weapon = chosenWeapon;
+    P2.modification = chosenModification
+
     P2.health += P2.roboType.healthBonus;
     P2.damage += P2.roboType.damageBonus;
     P2.speed += P2.roboType.speedBonus;
+
     P2.health += P2.weapon.healthBonus;
     P2.damage += P2.weapon.damageBonus;
     P2.speed += P2.weapon.speedBonus;
+
+    P2.health += P2.modification.healthBonus;
+    P2.damage += P2.modification.damageBonus;
+    P2.speed += P2.modification.speedBonus;
+
     console.log(P2)
     return P2
   }
@@ -111,6 +149,7 @@ $(document).ready(function() {
     console.log(P1);
     console.log(P2);
     checkHealth();
+    newView();
   }
 
   function checkHealth (){

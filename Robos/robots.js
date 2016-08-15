@@ -11,6 +11,7 @@ var RobotBattleDome = (function(robotBattleDome) {
 	  this.speed = 10;
 
 	  this.weapon = null;
+    this.modification = null;
 
     this.attack = function(target) {
     	var damage = this.damage;
