@@ -1,4 +1,4 @@
-RobotBattleDome = (function(robotBattleDome) {
+RobotBattleDome = (function(robotBattleDome){
 
 	robotBattleDome.Garage = {};
 

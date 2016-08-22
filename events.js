@@ -27,6 +27,7 @@ $(document).ready(function() {
   $("#battle").on("click", createP2);
   $("#battle").on("click", newView);
 
+// Creating Player 1, getting name and info cached, in case I ever wanted to implement a "back" button or something
   function getP1Name () {
     P1RoboName = $("#P1Name").val()
     return P1RoboName
