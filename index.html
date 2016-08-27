@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Battle bots</title>
+	<link type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+
+  <h1> ROBOT BATTLES</h1>
+
+	<div class="container" id="RobotCreation">
+		<div class="row">
+		  <div class="col-md-4" id="P1Info">
+			  <p class="col-md-3"> PLAYER 1 </p>
+
+			  <input type="text" id="P1Name">
+
+			  <select class="col-md-3" id="P1RoboSelector">
+			    <optgroup label="Bipedals">
+			      <option value="Walker"> Walker </option>
+			      <option value="MetalGear"> Metal Gear </option>
+			    </optgroup>
+			    <optgroup label="ATV's">
+			      <option value="FastATV"> Fast ATV </option>
+			      <option value="Tank"> Tank </option>
+			    </optgroup>
+			    <optgroup label="Drones">
+			      <option value="ScoutDrone"> Scout Drone </option>
+			      <option value="BomberDrone"> Bomber Drone </option>
+			    </optgroup>
+			  </select>
+
+			  <select id="P1WeaponSelector">
+			    <optgroup label="Robot Weapons">
+			    	<option value="Flamethrower">Flamethrower</option>
+			    	<option value="PhotonCannon">Photon Cannon</option>
+			    	<option value="SlicyBlades">Slicy Blades</option>
+			    	<option value="Chainsaw">Chainsaw</option>
+			    	<option value="RadGuns">Rad Guns</option>
+			    	<option value="MachineGun">Machine Gun</option>
+			    </optgroup>
+			  </select>
+
+			   <select id="P1ModSelector">
+			    <optgroup label="Robot Modifications">
+				    	<option value="LightShields">LightShields</option>
+				    	<option value="HeavyShields">HeavyShields</option>
+				    	<option value="EnhancedRockets">EnhancedRockets</option>
+				    	<option value="HeavyRockets">HeavyRockets</option>
+				    	<option value="EngineUpgrade">EngineUpgrade</option>
+		          <option value="MegaTurbineJetFuel">MegaTurbineJetFuel</option>
+			      </optgroup>
+			  </select>
+
+      </div>
+
+      <div class="col-md-4" id="P2Info">
+			  <p class="col-md-3"> PLAYER 2 </p>
+
+			  <input type="text" id="P2Name">
+
+			  <select class="col-md-3" id="P2RoboSelector">
+			    <optgroup label="Bipedals">
+			      <option value="Walker"> Walker </option>
+			      <option value="MetalGear"> Metal Gear </option>
+			    </optgroup>
+			    <optgroup label="ATV's">
+			      <option value="FastATV"> Fast ATV </option>
+			      <option value="Tank"> Tank </option>
+			    </optgroup>
+			    <optgroup label="Drones">
+			      <option value="ScoutDrone"> Scout Drone </option>
+			      <option value="BomberDrone"> Bomber Drone </option>
+			    </optgroup>
+			  </select>
+
+			  <select id="P2WeaponSelector">
+			    <optgroup label="Robot Weapons">
+				    	<option value="Flamethrower">Flamethrower</option>
+				    	<option value="PhotonCannon">Photon Cannon</option>
+				    	<option value="SlicyBlades">Slicy Blades</option>
+				    	<option value="Chainsaw">Chainsaw</option>
+				    	<option value="RadGuns">Rad Guns</option>
+				    	<option value="MachineGun">Machine Gun</option>
+			      </optgroup>
+			  </select>
+
+			  <select id="P2ModSelector">
+			    <optgroup label="Robot Modifications">
+				    	<option value="LightShields">LightShields</option>
+				    	<option value="HeavyShields">HeavyShields</option>
+				    	<option value="EnhancedRockets">EnhancedRockets</option>
+				    	<option value="HeavyRockets">HeavyRockets</option>
+				    	<option value="EngineUpgrade">EngineUpgrade</option>
+		          <option value="MegaTurbineJetFuel">MegaTurbineJetFuel</option>
+			      </optgroup>
+			  </select>
+
+		  </div>
+	  </div>
+    <button id="battle">Lets Battle!!</button>
+	</div>
+
+	<article id="P1Wins" class="hidden">
+    <div id="P1message"></div>
+  </article>
+
+  <article id="P2Wins" class="hidden">
+    <div id="P2message"></div>
+  </article>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="Robos/robots.js"></script>
+<script src="Robos/roboGarage.js"></script>
+<script src="Robos/roboArsenal.js"></script>
+<script src="Robos/roboGear.js"></script>
+<script src="events.js"></script>
+</body>
+</html>
+

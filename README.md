@@ -40,7 +40,7 @@ You'll be building robots to battle each other.
 ### Base Functional Requirements
 
 1. When your user interface first loads, provide 2 text inputs to name the two robots that will do battle.
-1. You must also provide a select element underneath each text input so that the user can select one of the 6 robot models you defined.
+1. You must also provide a select element underneath 'each text input so that the user can select one of the 6 robot models you defined.
 1. Provide a Attack! button that, when clicked, simply applies the damage output of each robot against the other one.
 1. Once either robot's health is <0 display a message that the battle is over, and which one won. For example...
 
@@ -56,7 +56,7 @@ These are **completely** optional, once you have the basic requirements met and 
 
 1. Define at least six different modifications and six different weapons that can be added to a robot.
 1. Each modification should provide some combination of the following benefits - increased protection, increased damage, or evasion capability (ability to avoid some attacks).
-1. Define the range of damage that each weapon can do. 
+1. Define the range of damage that each weapon can do.
 
 
 ### Bonus Functional Requirements
